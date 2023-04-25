@@ -1,5 +1,6 @@
 FROM osrf/ros:humble-desktop-full-jammy
-LABEL org.opencontainers.image.documentation="A devcontainer for ROS2 humble"
+LABEL org.opencontainers.image.documentation="https://github.com/teruyamato0731/dev_humble"
+LABEL org.opencontainers.image.description="A devcontainer for ROS2 humble"
 LABEL org.opencontainers.image.source="https://github.com/teruyamato0731/dev_humble_image"
 LABEL org.opencontainers.image.url="https://github.com/teruyamato0731/dev_humble_image/blob/master/.devcontainer/Dockerfile"
 
