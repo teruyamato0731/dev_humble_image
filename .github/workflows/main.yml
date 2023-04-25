@@ -31,6 +31,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and run Dev Container task
+        if: ${{ success() && steps.tag-version.outputs.release_type != false }}
         uses: devcontainers/ci@v0.3
         with:
           imageName: ghcr.io/teruyamato0731/dev-humble
@@ -39,6 +40,7 @@ jobs:
           runCmd: echo $ROS_DISTRO
 
       - name: Create a GitHub release
+        if: ${{ success() && steps.tag-version.outputs.release_type != false }}
         uses: ncipollo/release-action@v1
         with:
           commit: ${{ github.ref_name }}
