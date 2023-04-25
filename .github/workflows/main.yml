@@ -35,7 +35,7 @@ jobs:
         uses: devcontainers/ci@v0.3
         with:
           imageName: ghcr.io/teruyamato0731/dev-humble
-          imageTag: steps.tag-version.outputs.new_version
+          imageTag: ${{ steps.tag-version.outputs.new_version }}
           cacheFrom: ghcr.io/teruyamato0731/dev-humble
           runCmd: echo $ROS_DISTRO
 
