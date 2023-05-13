@@ -6,6 +6,7 @@ LABEL org.opencontainers.image.url="https://github.com/teruyamato0731/dev_humble
 
 RUN apt-get update && apt-get install -y \
   bash-completion \
+  udev \
   && rm -rf /var/lib/apt/lists/*
 
 RUN ( \
